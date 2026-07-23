@@ -4,7 +4,7 @@
 
 Basically, just a very simple calculator, very similar to Google's!
 
-You can test it [Here!]()
+You can test it [Here!](https://brundevcoder.github.io/g-calculator/)
 
 ## How does it work?
 
