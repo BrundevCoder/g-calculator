@@ -27,7 +27,8 @@ function add(action) {
 
 function calculate() {
     let answer = eval(calc);
-    calcDisplay.innerText = `${answer}`;
+
+    calcDisplay.innerText = answer ? `${answer}` : "Error";
     calc = `${answer}`;
 }
 
