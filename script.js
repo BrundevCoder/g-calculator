@@ -29,6 +29,12 @@ function calculate() {
     let answer = eval(calc);
 
     calcDisplay.innerText = (answer !== undefined || !isNaN(answer)) ? `${answer}` : "Error";
+
+    if (calcDisplay.innerText === "Error") {
+        calc = "";
+        return;
+    }
+
     calc = `${answer}`;
 }
 
