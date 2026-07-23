@@ -28,7 +28,7 @@ function add(action) {
 function calculate() {
     let answer = eval(calc);
 
-    calcDisplay.innerText = answer ? `${answer}` : "Error";
+    calcDisplay.innerText = (answer !== undefined || !isNaN(answer)) ? `${answer}` : "Error";
     calc = `${answer}`;
 }
 
