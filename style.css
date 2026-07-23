@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&family=VT323&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,8 @@
     --operator-bg-color: #403F56;
     --numbers-bg-color: #2E2D35;
     --numbers-txt-color: #E4E1E8;
+    --equal-bg-color: #F5B5C8;
+    --equal-txt-color: #381E28;
 }
 
 body {
@@ -26,12 +30,11 @@ main {
     align-items: center;
     flex-direction: column;
     max-width: 660px;
-    background: #fff;
 }
 
 .display {
     width: 100%;
-    height: 15vh;
+    height: 25vh;
     background: var(--background);
 }
 
@@ -42,13 +45,29 @@ main {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2px 3px;
+    gap: 3px 4px;
 }
 
 .buttons-grid button {
+    cursor: pointer;
     border: none;
     border-radius: 999px;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
     font-weight: bold;
     background: var(--numbers-bg-color);
     color: var(--numbers-txt-color);
+}
+
+.ac {
+    background: var(--ac-bg-color) !important;
+}
+
+.operator {
+    background: var(--operator-bg-color) !important;
+}
+
+.equal {
+    background: var(--equal-bg-color) !important;
+    color: var(--equal-txt-color) !important;
 }
