@@ -22,7 +22,7 @@ let calc = "";
 
 function add(action) {
     calc += action;
-    calcDisplay.innerText = `${calc}`;
+    calcDisplay.innerText = `${calc.replaceAll("*", "x")}`;
 }
 
 function calculate() {

@@ -9,10 +9,14 @@
 :root {
     --background: #16151A;
     --ac-bg-color: #48427E;
+    --ac-bg-color-hover: #554f8f;
     --operator-bg-color: #403F56;
+    --operator-bg-color-hover: #514f69;
     --numbers-bg-color: #2E2D35;
+    --numbers-bg-color-hover: #393841;
     --numbers-txt-color: #E4E1E8;
     --equal-bg-color: #F5B5C8;
+    --equal-bg-color-hover: #ffc7d8;
     --equal-txt-color: #381E28;
 }
 
@@ -63,24 +67,45 @@ main {
     font-weight: bold;
     background: var(--numbers-bg-color);
     color: var(--numbers-txt-color);
+    transition: 100ms ease;
+}
+
+.buttons-grid button:hover {
+    background: var(--numbers-bg-color-hover);
 }
 
 .ac {
     background: var(--ac-bg-color) !important;
 }
 
+.ac:hover {
+    background: var(--ac-bg-color-hover) !important;
+}
+
 .operator {
     background: var(--operator-bg-color) !important;
 }
 
+.operator:hover {
+    background: var(--operator-bg-color-hover) !important;
+}
+
 .equal {
+    grid-column: 4;
     background: var(--equal-bg-color) !important;
     color: var(--equal-txt-color) !important;
+}
+
+.equal:hover {
+    background: var(--equal-bg-color-hover) !important;
 }
 
 @media (max-width: 550px) {
     .buttons-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .equal {
+        grid-column: 3;
     }
 }
 
@@ -88,11 +113,17 @@ main {
     .buttons-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .equal {
+        grid-column: 2;
+    }
 }
 
 @media (max-width: 190px) {
     .buttons-grid {
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
+    }
+    .equal {
+        grid-column: 1;
     }
 }
