@@ -2,7 +2,7 @@
 
 # Replica of the Google Calculator
 
-Basically, just a very simple calculator, very similar to Google's!
+Basically, just a very simple calculator, very similar to Google's! Build in an attempt to emulate a version very similar to Google's.
 
 You can test it [Here!](https://brundevcoder.github.io/g-calculator/)
 
